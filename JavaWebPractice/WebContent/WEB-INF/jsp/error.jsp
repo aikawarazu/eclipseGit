@@ -4,29 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>success</title>
+<title>error</title>
 </head>
 <body>
 	struts:
 	<p>
-		<q>success</q>
+		<q>error</q>
 	</p>
 	<div>
-		<span>${person}</span> <span
-			style="display: block; border: 1px red solid">${requestScope.age+111}</span>
-		<ul>
-			<li>aaa</li>
-			<li>a</li>
-			<li>aa</li>
-			<li>aaaa</li>
-		</ul>
-		<ol>
-			<li>aaa</li>
-			<li>a</li>
-			<li>aa</li>
-			<li>aaaa</li>
-		
-		</ol>
+		<span>${person}</span> 
 	</div>
 </body>
 </html>
