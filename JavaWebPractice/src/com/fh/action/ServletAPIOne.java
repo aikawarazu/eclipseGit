@@ -4,9 +4,7 @@ import javax.servlet.ServletContext;
 
 import org.apache.struts2.ServletActionContext;
 
-import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
-import com.sun.net.httpserver.Authenticator.Success;
 
 public class ServletAPIOne extends ActionSupport{
 

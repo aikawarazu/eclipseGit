@@ -5,9 +5,7 @@ import javax.servlet.ServletContext;
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.util.ServletContextAware;
 
-import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
-import com.sun.net.httpserver.Authenticator.Success;
 
 public class ServletAPITwo extends ActionSupport implements ServletContextAware{
 
