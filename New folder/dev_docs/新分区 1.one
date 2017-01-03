@@ -1,0 +1,9 @@
+create table if not exists student (
+name     varchar(30),
+gender   varchar(10),
+birthday date       ,
+id       integer(10),
+password varchar(30),
+hobbies  varchar(50),
+email    varchar(50)
+);
