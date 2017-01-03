@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 25, 2016 11:08:14 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="com.fh.domain.Student" table="student" catalog="test" optimistic-lock="version">
+        <id name="stuId" type="java.lang.Integer">
+            <column name="stuId" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="classes" class="com.fh.domain.Classes" fetch="select">
+            <column name="classId" />
+        </many-to-one>
+        <property name="password" type="string">
+            <column name="password" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true" />
+        </property>
+        <property name="gender" type="string">
+            <column name="gender" not-null="true" />
+        </property>
+        <property name="birthday" type="timestamp">
+            <column name="birthday" length="19" />
+        </property>
+        <property name="hobbies" type="string">
+            <column name="hobbies" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" />
+        </property>
+        <set name="courses" table="student_course" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="stuId" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.fh.domain.Course">
+                <column name="course_id" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="courses_1" table="course_students" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="stuId" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.fh.domain.Course">
+                <column name="course_id" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>
