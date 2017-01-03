@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 25, 2016 11:08:14 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="com.fh.domain.Person" table="person" catalog="test" optimistic-lock="version">
+        <id name="personId" type="java.lang.Integer">
+            <column name="PERSON_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="password" type="string">
+            <column name="password" />
+        </property>
+        <property name="hobbies" type="string">
+            <column name="hobbies" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true" />
+        </property>
+        <property name="gender" type="string">
+            <column name="gender" not-null="true" />
+        </property>
+        <property name="birthday" type="timestamp">
+            <column name="birthday" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

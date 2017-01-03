@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 27, 2016 10:33:24 AM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="com.fh.domain.Orderitem" table="orderitem" catalog="test" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="Id" />
+            <generator class="identity" />
+        </id>
+        <property name="orderid" type="java.lang.Integer">
+            <column name="ORDERID" />
+        </property>
+        <property name="commodity" type="java.lang.Integer">
+            <column name="COMMODITY" />
+        </property>
+        <property name="discount" type="java.lang.Double">
+            <column name="DISCOUNT" precision="11" />
+        </property>
+        <property name="actprice" type="java.lang.Double">
+            <column name="ACTPRICE" precision="11" />
+        </property>
+        <property name="amount" type="java.lang.Double">
+            <column name="AMOUNT" precision="11" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory name="">
+  <property name="show_sql">true</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/test</property>
+  <property name="hibernate.connection.username">root</property>
+  <property name="hibernate.connection.password">fhfh</property>
+  <property name="hibernate.format_sql">true</property>
+  <property name="hibernate.hbm2ddl.auto">update</property>
+  <property name="hibernate.connection.autocommit">false</property>
+  <property name="cache.use_second_level_cache">true</property>
+  <property name="cache.provider_class">net.sf.ehcache.hibernate.EhCacheProvider</property>
+  <property name="generate_statistics">true</property>
+  <mapping resource="com/fh/domain/Course.hbm.xml"/>
+  <mapping resource="com/fh/domain/Student.hbm.xml"/>
+  <mapping resource="com/fh/domain/Classes.hbm.xml"/>
+  
+  <mapping resource="com/fh/domain/Customer.hbm.xml"/>
+  <mapping resource="com/fh/domain/Orderitem.hbm.xml"/>
+  <mapping resource="com/fh/domain/Seller.hbm.xml"/>
+  <mapping resource="com/fh/domain/Orderform.hbm.xml"/>
+  <mapping resource="com/fh/domain/Commodity.hbm.xml"/>
+ </session-factory>
+</hibernate-configuration>
