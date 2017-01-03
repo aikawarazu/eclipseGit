@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 27, 2016 10:33:24 AM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="com.fh.domain.Customer" table="customer" catalog="test" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="Id" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="100" />
+        </property>
+        <property name="tel" type="string">
+            <column name="tel" length="50" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="1000" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="300" />
+        </property>
+        <property name="sex" type="string">
+            <column name="sex" length="30" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="4000" />
+        </property>
+        <property name="age" type="java.lang.Integer">
+            <column name="age" />
+        </property>
+        <property name="birthday" type="date">
+            <column name="birthday" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>
